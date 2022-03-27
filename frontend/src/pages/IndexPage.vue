@@ -1,5 +1,9 @@
 <template>
-  <q-page class="row items-center justify-evenly"> Hello, </q-page>
+  <q-page class="column items-center justify-center">
+    <p>Hello.</p>
+
+    <router-link to="/ping">ping</router-link>
+  </q-page>
 </template>
 
 <script lang="ts">
