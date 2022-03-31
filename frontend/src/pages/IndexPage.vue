@@ -2,29 +2,19 @@
   <q-page class="column items-center justify-center">
     <div v-html="md.render(targetText)"></div>
 
-    <router-link to="/ping">ping</router-link>
+    <div class="row items-center justify-center q-gutter-lg">
+      <router-link to="/me">me?</router-link>
+      <router-link to="/ping">ping</router-link>
+    </div>
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import markdownIt from 'markdown-it';
-import highlightjs from 'highlight.js';
-import sanitizer from 'markdown-it-sanitizer';
+import { md } from 'src/boot/markdown-it';
 
 export default defineComponent({
   setup() {
-    const md = markdownIt({
-      html: true,
-      xhtmlOut: true,
-      breaks: true,
-      quotes: '“”‘’',
-      typographer: true,
-      highlight: function (code, lang) {
-        return highlightjs.highlightAuto(code, [lang]).value;
-      },
-    }).use(sanitizer);
-
     const targetText = `
 \`\`\`ruby
 try until success?
