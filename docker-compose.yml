@@ -3,13 +3,13 @@ version: "3.9"
 services:
   quasar:
     container_name: damin_frontend
-    image: node:17.8.0
+    image: node:18
     networks:
       - backend_tier
     volumes:
       - ./frontend:/app/frontend
     working_dir: /app/frontend
-    command: [sh, -c, npm i && npm run dev]
+    command: [sh, -c, npm i -g @quasar/cli && npm ci && npm run build && quasar serve dist/spa --history --port 8080]
     ports:
       - 8080:8080
 

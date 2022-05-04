@@ -105,14 +105,14 @@ export default defineComponent({
     const router = useRouter();
 
     const skills: string[] = [
-      'C#',
-      'Solidity',
-      'Unity',
-      'Rails',
       'Rust',
+      'Rails',
+      'Solidity',
+      'C#',
+      'Unity',
       'Python',
-      'TS',
       'Vue.js',
+      'TypeScript',
       'Java',
     ];
     const targetText = ref('');
