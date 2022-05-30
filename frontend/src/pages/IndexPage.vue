@@ -2,9 +2,26 @@
   <q-page class="column items-center justify-center">
     <div v-html="md.render(targetText)"></div>
 
-    <div class="row items-center justify-center q-gutter-lg">
+    <div class="row items-center justify-center q-gutter-lg q-mb-lg">
       <router-link to="/me">me?</router-link>
-      <router-link to="/ping">ping</router-link>
+    </div>
+
+    <div class="row items-center justify-center q-gutter-lg">
+      <a href="https://naming.bonfida.org/#/domain/damin">
+        damin.sol
+        <q-tooltip> I'm a big fan of Solana </q-tooltip>
+      </a>
+      <div class="row-items-center justify-center q-gutter-xs">
+        <a href="https://twitter.com/damin_sol" class="outside-icon">
+          <q-btn flat round icon="mdi-twitter" />
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100066516363131"
+          class="outside-icon"
+        >
+          <q-btn flat round icon="mdi-facebook" />
+        </a>
+      </div>
     </div>
   </q-page>
 </template>
@@ -28,3 +45,10 @@ try until success?
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.outside-icon {
+  text-decoration: none;
+  color: black;
+}
+</style>

@@ -18,10 +18,6 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/me/PersonCode.vue'),
       },
       {
-        path: 'ping',
-        component: () => import('pages/PingPage.vue'),
-      },
-      {
         path: '/:catchAll(.*)*',
         component: () => import('pages/ErrorNotFound.vue'),
       },
