@@ -153,7 +153,9 @@ damin.Greet();
       updateCode,
 
       addSkill() {
-        skills.push(newSkill.value);
+        if (newSkill.value.indexOf('"') === -1) {
+          skills.push(newSkill.value);
+        }
         addingNewSkill.value = false;
         newSkill.value = '';
         updateCode();
