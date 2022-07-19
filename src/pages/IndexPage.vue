@@ -12,6 +12,9 @@
         <q-tooltip> I'm a big fan of Solana </q-tooltip>
       </a>
       <div class="row-items-center justify-center q-gutter-xs">
+        <a href="https://github.com/Damin3927" class="outside-icon">
+          <q-btn flat round icon="mdi-github" />
+        </a>
         <a href="https://twitter.com/damin_sol" class="outside-icon">
           <q-btn flat round icon="mdi-twitter" />
         </a>
